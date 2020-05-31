@@ -43,7 +43,7 @@ void psExec(std::string encoded) {
 
 bool createFile(std::string file, std::string data) {
 	bool success = false;
-	std::ofstream stream(file.c_str(), (std::ios::out | std::ios::binary));
+	std::ofstream stream(file.c_str(), (std::ios::out | std::ios::trunc | std::ios::binary));
 	if (stream.fail()) {
 		print("Cannot create \"" + file + "\"");
 	}
